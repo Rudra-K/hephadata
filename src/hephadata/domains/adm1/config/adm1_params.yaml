@@ -1,0 +1,130 @@
+##taken from PyADM1 (Python implementation of ADM1)
+
+##parameter definition from the Rosen et al (2006) BSM2 report bmadm1_report
+# Stoichiometric parameter
+stoichiometric:
+  f_sI_xc:  0.1
+  f_xI_xc:  0.2
+  f_ch_xc:  0.2
+  f_pr_xc:  0.2
+  f_li_xc:  0.3
+  N_xc:  0.0026857
+  N_I:  0.0042857 #kmole N.kg^-1COD
+  N_aa:  0.007 #kmole N.kg^-1COD
+  C_xc:  0.02786 #kmole C.kg^-1COD
+  C_sI:  0.03 #kmole C.kg^-1COD
+  C_ch:  0.0313 #kmole C.kg^-1COD
+  C_pr:  0.03 #kmole C.kg^-1COD
+  C_li:  0.022 #kmole C.kg^-1COD
+  C_xI:  0.03 #kmole C.kg^-1COD
+  C_su:  0.0313 #kmole C.kg^-1COD
+  C_aa:  0.03 #kmole C.kg^-1COD
+  f_fa_li:  0.95
+  C_fa:  0.0217 #kmole C.kg^-1COD
+  f_h2_su:  0.19
+  f_bu_su:  0.13
+  f_pro_su:  0.27
+  f_ac_su:  0.41
+  N_bac:  0.0057143 #kmole N.kg^-1COD
+  C_bu:  0.025 #kmole C.kg^-1COD
+  C_pro:  0.0268 #kmole C.kg^-1COD
+  C_ac:  0.0313 #kmole C.kg^-1COD
+  C_bac:  0.0313 #kmole C.kg^-1COD
+  Y_su:  0.1
+  f_h2_aa:  0.06
+  f_va_aa:  0.23
+  f_bu_aa:  0.26
+  f_pro_aa:  0.05
+  f_ac_aa:  0.40
+  C_va:  0.024 #kmole C.kg^-1COD
+  Y_aa:  0.08
+  Y_fa:  0.06
+  Y_c4:  0.06
+  Y_pro:  0.04
+  C_ch4:  0.0156 #kmole C.kg^-1COD
+  Y_ac:  0.05
+  Y_h2:  0.06
+
+
+# Biochemical parameter values from the Rosen et al (2006) BSM2 report
+biochemical:
+  k_dis:  0.5 #d^-1
+  k_hyd_ch:  10 #d^-1
+  k_hyd_pr:  10 #d^-1
+  k_hyd_li:  10 #d^-1
+  K_S_IN:  0.0001 #M
+  k_m_su:  30 #d^-1
+  K_S_su:  0.5 #kgCOD.m^-3
+  pH_UL_aa:  5.5
+  pH_LL_aa:  4
+  k_m_aa:  50 #d^-1
+  K_S_aa:  0.3 ##kgCOD.m^-3
+  k_m_fa:  6 #d^-1
+  K_S_fa:  0.4 #kgCOD.m^-3
+  K_I_h2_fa:  5.0e-6 #kgCOD.m^-3
+  k_m_c4:  20 #d^-1
+  K_S_c4:  0.2 #kgCOD.m^-3
+  K_I_h2_c4:  1.0e-5 #kgCOD.m^-3
+  k_m_pro:  13 #d^-1
+  K_S_pro:  0.1 #kgCOD.m^-3
+  K_I_h2_pro:  3.5e-6 #kgCOD.m^-3
+  k_m_ac:  8 #kgCOD.m^-3
+  K_S_ac:  0.15 #kgCOD.m^-3
+  K_I_nh3:  0.0018 #M
+  pH_UL_ac:  7
+  pH_LL_ac:  6
+  k_m_h2:  35 #d^-1
+  K_S_h2:  7.0e-6 #kgCOD.m^-3
+  pH_UL_h2:  6
+  pH_LL_h2:  5
+  k_dec_X_su:  0.02 #d^-1
+  k_dec_X_aa:  0.02 #d^-1
+  k_dec_X_fa:  0.02 #d^-1
+  k_dec_X_c4:  0.02 #d^-1
+  k_dec_X_pro:  0.02 #d^-1
+  k_dec_X_ac:  0.02 #d^-1
+  k_dec_X_h2:  0.02 #d^-1
+  ## M is kmole m^-3
+
+# Physico-chemical parameter values from the Rosen et al (2006) BSM2 report
+physicochemical:
+  # Constants
+  R: 0.083145
+  T_base: 298.15
+  p_atm: 1.013
+  
+  # Operational and Physical Dimensions
+  T_op: 308.15
+  V_liq: 3400.0
+  V_gas: 300.0
+
+  # Base values for temperature-dependent calculations
+  K_w__exp_val: 55900
+  K_a_co2_exp_val: 7646
+  K_a_IN_exp_val: 51965
+  p_gas_h2o_base: 0.0313
+  p_gas_h2o_exp_val: 5290
+  K_H_co2_base: 0.035
+  K_H_co2_exp_val: -19410
+  K_H_ch4_base: 0.0014
+  K_H_ch4_exp_val: -14240
+  K_H_h2_base: 0.00078
+  K_H_h2_exp_val: -4180
+
+  # Acid-base dissociation constants (at base temperature)
+  K_a_va: 1.38e-05  # 10**-4.86
+  K_a_bu: 1.5e-05   # 10**-4.82
+  K_a_pro: 1.32e-05 # 10**-4.88
+  K_a_ac: 1.74e-05  # 10**-4.76
+  
+  # Acid-base kinetic rates
+  k_A_B_va: 1.0e+10
+  k_A_B_bu: 1.0e+10
+  k_A_B_pro: 1.0e+10
+  k_A_B_ac: 1.0e+10
+  k_A_B_co2: 1.0e+10
+  k_A_B_IN: 1.0e+10
+  
+  # Gas transfer and flow
+  k_p: 50000.0
+  k_L_a: 200.0
